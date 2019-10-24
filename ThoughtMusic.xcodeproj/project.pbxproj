@@ -94,15 +94,11 @@
 			children = (
 				58C2C043236149C40087FF23 /* AppDelegate.swift */,
 				58C2C045236149C40087FF23 /* SceneDelegate.swift */,
-				58C2C049236149C40087FF23 /* Main.storyboard */,
+				58C2C07523614CDA0087FF23 /* Model */,
+				58C2C07623614CFB0087FF23 /* VIew */,
+				58C2C07423614CC20087FF23 /* Shuffle */,
 				58C2C04C236149C80087FF23 /* Assets.xcassets */,
-				58C2C04E236149C90087FF23 /* LaunchScreen.storyboard */,
 				58C2C051236149C90087FF23 /* Info.plist */,
-				58C2C06523614A4B0087FF23 /* Song.swift */,
-				58C2C06823614C3F0087FF23 /* ShuffleViewController.swift */,
-				58C2C06B23614C600087FF23 /* ShufflePresenter.swift */,
-				58C2C06E23614C720087FF23 /* ShuffleInteractor.swift */,
-				58C2C07123614C850087FF23 /* ShuffleWorker.swift */,
 			);
 			path = ThoughtMusic;
 			sourceTree = "<group>";
@@ -114,6 +110,34 @@
 				58C2C05C236149C90087FF23 /* Info.plist */,
 			);
 			path = ThoughtMusicTests;
+			sourceTree = "<group>";
+		};
+		58C2C07423614CC20087FF23 /* Shuffle */ = {
+			isa = PBXGroup;
+			children = (
+				58C2C06823614C3F0087FF23 /* ShuffleViewController.swift */,
+				58C2C06B23614C600087FF23 /* ShufflePresenter.swift */,
+				58C2C06E23614C720087FF23 /* ShuffleInteractor.swift */,
+				58C2C07123614C850087FF23 /* ShuffleWorker.swift */,
+			);
+			path = Shuffle;
+			sourceTree = "<group>";
+		};
+		58C2C07523614CDA0087FF23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				58C2C06523614A4B0087FF23 /* Song.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		58C2C07623614CFB0087FF23 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				58C2C049236149C40087FF23 /* Main.storyboard */,
+				58C2C04E236149C90087FF23 /* LaunchScreen.storyboard */,
+			);
+			path = VIew;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
