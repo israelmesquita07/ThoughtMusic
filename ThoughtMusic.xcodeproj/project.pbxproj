@@ -9,11 +9,20 @@
 /* Begin PBXBuildFile section */
 		58C2C044236149C40087FF23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C043236149C40087FF23 /* AppDelegate.swift */; };
 		58C2C046236149C40087FF23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C045236149C40087FF23 /* SceneDelegate.swift */; };
-		58C2C048236149C40087FF23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C047236149C40087FF23 /* ViewController.swift */; };
 		58C2C04B236149C40087FF23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58C2C049236149C40087FF23 /* Main.storyboard */; };
 		58C2C04D236149C80087FF23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58C2C04C236149C80087FF23 /* Assets.xcassets */; };
 		58C2C050236149C90087FF23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58C2C04E236149C90087FF23 /* LaunchScreen.storyboard */; };
 		58C2C05B236149C90087FF23 /* ThoughtMusicTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C05A236149C90087FF23 /* ThoughtMusicTests.swift */; };
+		58C2C06623614A4B0087FF23 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C06523614A4B0087FF23 /* Song.swift */; };
+		58C2C06723614A4B0087FF23 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C06523614A4B0087FF23 /* Song.swift */; };
+		58C2C06923614C3F0087FF23 /* ShuffleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C06823614C3F0087FF23 /* ShuffleViewController.swift */; };
+		58C2C06A23614C3F0087FF23 /* ShuffleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C06823614C3F0087FF23 /* ShuffleViewController.swift */; };
+		58C2C06C23614C600087FF23 /* ShufflePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C06B23614C600087FF23 /* ShufflePresenter.swift */; };
+		58C2C06D23614C600087FF23 /* ShufflePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C06B23614C600087FF23 /* ShufflePresenter.swift */; };
+		58C2C06F23614C720087FF23 /* ShuffleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C06E23614C720087FF23 /* ShuffleInteractor.swift */; };
+		58C2C07023614C720087FF23 /* ShuffleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C06E23614C720087FF23 /* ShuffleInteractor.swift */; };
+		58C2C07223614C850087FF23 /* ShuffleWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C07123614C850087FF23 /* ShuffleWorker.swift */; };
+		58C2C07323614C850087FF23 /* ShuffleWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C07123614C850087FF23 /* ShuffleWorker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +39,6 @@
 		58C2C040236149C40087FF23 /* ThoughtMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThoughtMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58C2C043236149C40087FF23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58C2C045236149C40087FF23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		58C2C047236149C40087FF23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		58C2C04A236149C40087FF23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58C2C04C236149C80087FF23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58C2C04F236149C90087FF23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +46,11 @@
 		58C2C056236149C90087FF23 /* ThoughtMusicTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThoughtMusicTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58C2C05A236149C90087FF23 /* ThoughtMusicTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThoughtMusicTests.swift; sourceTree = "<group>"; };
 		58C2C05C236149C90087FF23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58C2C06523614A4B0087FF23 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		58C2C06823614C3F0087FF23 /* ShuffleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleViewController.swift; sourceTree = "<group>"; };
+		58C2C06B23614C600087FF23 /* ShufflePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShufflePresenter.swift; sourceTree = "<group>"; };
+		58C2C06E23614C720087FF23 /* ShuffleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleInteractor.swift; sourceTree = "<group>"; };
+		58C2C07123614C850087FF23 /* ShuffleWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleWorker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +94,15 @@
 			children = (
 				58C2C043236149C40087FF23 /* AppDelegate.swift */,
 				58C2C045236149C40087FF23 /* SceneDelegate.swift */,
-				58C2C047236149C40087FF23 /* ViewController.swift */,
 				58C2C049236149C40087FF23 /* Main.storyboard */,
 				58C2C04C236149C80087FF23 /* Assets.xcassets */,
 				58C2C04E236149C90087FF23 /* LaunchScreen.storyboard */,
 				58C2C051236149C90087FF23 /* Info.plist */,
+				58C2C06523614A4B0087FF23 /* Song.swift */,
+				58C2C06823614C3F0087FF23 /* ShuffleViewController.swift */,
+				58C2C06B23614C600087FF23 /* ShufflePresenter.swift */,
+				58C2C06E23614C720087FF23 /* ShuffleInteractor.swift */,
+				58C2C07123614C850087FF23 /* ShuffleWorker.swift */,
 			);
 			path = ThoughtMusic;
 			sourceTree = "<group>";
@@ -200,9 +217,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58C2C048236149C40087FF23 /* ViewController.swift in Sources */,
 				58C2C044236149C40087FF23 /* AppDelegate.swift in Sources */,
+				58C2C06C23614C600087FF23 /* ShufflePresenter.swift in Sources */,
+				58C2C06F23614C720087FF23 /* ShuffleInteractor.swift in Sources */,
 				58C2C046236149C40087FF23 /* SceneDelegate.swift in Sources */,
+				58C2C07223614C850087FF23 /* ShuffleWorker.swift in Sources */,
+				58C2C06923614C3F0087FF23 /* ShuffleViewController.swift in Sources */,
+				58C2C06623614A4B0087FF23 /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +232,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				58C2C05B236149C90087FF23 /* ThoughtMusicTests.swift in Sources */,
+				58C2C07023614C720087FF23 /* ShuffleInteractor.swift in Sources */,
+				58C2C06723614A4B0087FF23 /* Song.swift in Sources */,
+				58C2C07323614C850087FF23 /* ShuffleWorker.swift in Sources */,
+				58C2C06D23614C600087FF23 /* ShufflePresenter.swift in Sources */,
+				58C2C06A23614C3F0087FF23 /* ShuffleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,7 +398,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.israel3D.ThoughtMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -390,7 +416,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.israel3D.ThoughtMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
