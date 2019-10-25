@@ -12,7 +12,7 @@ import GameplayKit
 protocol ShuffleViewControllerProtocol {
     func getSongs()
     func showSongs(songs: [Song]?)
-    func showError(_ bool:Bool)
+    func showError()
     func toggleLoading(_ bool:Bool)
 }
 
@@ -40,6 +40,12 @@ class ShuffleViewController: UIViewController, ShuffleViewControllerProtocol {
         tableView.tableFooterView = UIView()
     }
     
+    func getSongs() {
+        presenter.shufflePresenterDelegate = self
+        interactor.shuffleInteractorDelegate = presenter
+        interactor.getSongs(urlIds: urlIds)
+    }
+
     func toggleLoading(_ bool:Bool){
         if bool {
             loadingView.isHidden = false
@@ -58,12 +64,6 @@ class ShuffleViewController: UIViewController, ShuffleViewControllerProtocol {
         return image
     }
 
-    func getSongs() {
-        presenter.shufflePresenterDelegate = self
-        interactor.shuffleInteractorDelegate = presenter
-        interactor.getSongs(urlIds: urlIds)
-    }
-    
     private func shuffleSongs() {
         songsArray = songsArray.shuffled()
         songsArray = Utils.noRepeatedSort(songsArray)
@@ -79,8 +79,15 @@ class ShuffleViewController: UIViewController, ShuffleViewControllerProtocol {
         shuffleSongs()
     }
     
-    func showError(_ bool: Bool) {
-        print(bool)
+    func showError() {
+        showAlert(title: "Ops!", message: "Ocorreu um erro!")
+    }
+    
+    private func showAlert(title:String, message:String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alert.addAction(action)
+        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func shuffleAction(_ sender: UIBarButtonItem) {

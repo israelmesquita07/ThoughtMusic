@@ -25,13 +25,13 @@ class ShuffleInteractor: ShuffleInteractorProtocol {
             
             guard let self = self else { return }
             guard let songs = result.results else {
-                self.shuffleInteractorDelegate?.showError(true)
+                self.shuffleInteractorDelegate?.showError()
                 return
             }
             self.shuffleInteractorDelegate?.showSongs(songs: songs)
             
         }, onError: { (error) in
-            self.shuffleInteractorDelegate?.showError(true)
+            self.shuffleInteractorDelegate?.showError()
         })
         worker = nil
     }
