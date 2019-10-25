@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import GameplayKit
 
 protocol ShuffleViewControllerProtocol {
     func getSongs()
@@ -54,14 +53,6 @@ class ShuffleViewController: UIViewController, ShuffleViewControllerProtocol {
         }
         loadingView.isHidden = true
         activityIndicator.stopAnimating()
-    }
-    
-    private func downloadImage(from url: String) -> UIImage {
-        
-        guard let url = URL(string: url) else { return UIImage() }
-        guard let data = try? Data(contentsOf: url) else { return UIImage() }
-        guard let image = UIImage(data: data) else { return UIImage() }
-        return image
     }
 
     private func shuffleSongs() {
@@ -112,7 +103,7 @@ extension ShuffleViewController: UITableViewDataSource {
         let song = songsArray[indexPath.row]
         cell.textLabel?.text = song.trackName
         cell.detailTextLabel?.text = "\(song.artistName ?? "Artista")(\(song.primaryGenreName ?? "Gênero"))"
-        cell.imageView?.image = downloadImage(from: song.artworkUrl ?? "logo")
+        cell.imageView?.imageFromServerURL(urlString: song.artworkUrl ?? "", defaultImage: "logo")
         
         return cell
     }

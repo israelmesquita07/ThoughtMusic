@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		584E4DC12362BCA500B4547D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584E4DC02362BCA500B4547D /* UIImageView+Extension.swift */; };
+		584E4DC22362BCA500B4547D /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584E4DC02362BCA500B4547D /* UIImageView+Extension.swift */; };
 		58C2C044236149C40087FF23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C043236149C40087FF23 /* AppDelegate.swift */; };
 		58C2C046236149C40087FF23 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C045236149C40087FF23 /* SceneDelegate.swift */; };
 		58C2C04B236149C40087FF23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58C2C049236149C40087FF23 /* Main.storyboard */; };
@@ -44,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		584E4DC02362BCA500B4547D /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		58C2C040236149C40087FF23 /* ThoughtMusic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThoughtMusic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58C2C043236149C40087FF23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		58C2C045236149C40087FF23 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,11 +111,11 @@
 				58C2C045236149C40087FF23 /* SceneDelegate.swift */,
 				58C2C07523614CDA0087FF23 /* Model */,
 				58C2C07623614CFB0087FF23 /* VIew */,
-				58C2C07423614CC20087FF23 /* Shuffle */,
+				58C2C07423614CC20087FF23 /* Shuffle Scenes */,
 				58C2C07A2362392E0087FF23 /* Service */,
+				58C2C081236279430087FF23 /* Utils */,
 				58C2C04C236149C80087FF23 /* Assets.xcassets */,
 				58C2C051236149C90087FF23 /* Info.plist */,
-				58C2C081236279430087FF23 /* Utils */,
 			);
 			path = ThoughtMusic;
 			sourceTree = "<group>";
@@ -126,7 +129,7 @@
 			path = ThoughtMusicTests;
 			sourceTree = "<group>";
 		};
-		58C2C07423614CC20087FF23 /* Shuffle */ = {
+		58C2C07423614CC20087FF23 /* Shuffle Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				58C2C06823614C3F0087FF23 /* ShuffleViewController.swift */,
@@ -134,7 +137,7 @@
 				58C2C06E23614C720087FF23 /* ShuffleInteractor.swift */,
 				58C2C07123614C850087FF23 /* ShuffleWorker.swift */,
 			);
-			path = Shuffle;
+			path = "Shuffle Scenes";
 			sourceTree = "<group>";
 		};
 		58C2C07523614CDA0087FF23 /* Model */ = {
@@ -168,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				58C2C07E2362793E0087FF23 /* Utils.swift */,
+				584E4DC02362BCA500B4547D /* UIImageView+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -282,6 +286,7 @@
 				58C2C046236149C40087FF23 /* SceneDelegate.swift in Sources */,
 				58C2C07F2362793E0087FF23 /* Utils.swift in Sources */,
 				58C2C07223614C850087FF23 /* ShuffleWorker.swift in Sources */,
+				584E4DC12362BCA500B4547D /* UIImageView+Extension.swift in Sources */,
 				58C2C06923614C3F0087FF23 /* ShuffleViewController.swift in Sources */,
 				58C2C0782362391D0087FF23 /* API.swift in Sources */,
 				58C2C06623614A4B0087FF23 /* Song.swift in Sources */,
@@ -292,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				584E4DC22362BCA500B4547D /* UIImageView+Extension.swift in Sources */,
 				58C2C05B236149C90087FF23 /* ThoughtMusicTests.swift in Sources */,
 				58C2C07023614C720087FF23 /* ShuffleInteractor.swift in Sources */,
 				58C2C0802362793E0087FF23 /* Utils.swift in Sources */,
