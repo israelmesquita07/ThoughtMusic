@@ -11,8 +11,14 @@ import XCTest
 
 class ThoughtMusicTests: XCTestCase {
 
+    var sut: ShuffleViewController!
+    var songsArray:[Song]!
+    var song:Song!
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        super.setUp()
+        sut = ShuffleViewController()
+        songsArray = getAPISongData()
     }
 
     override func tearDown() {
@@ -22,6 +28,9 @@ class ThoughtMusicTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        song = songsArray[0]
+        guard song != nil else { return }
+        XCTAssertEqual(song.artistName, "Bloco TótiOQue")
     }
 
     func testPerformanceExample() {
@@ -29,6 +38,23 @@ class ThoughtMusicTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+    
+    private func getAPISongData() -> [Song]? {
+        
+        if let path = Bundle.main.path(forResource: "Songs", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .alwaysMapped)
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                if let result = try? decoder.decode(Result.self, from: data) {
+                    return result.results
+                }
+            } catch let error {
+                print("Error: \(error)")
+            }
+        }
+        return nil
     }
 
 }
