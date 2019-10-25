@@ -8,20 +8,20 @@
 
 import Foundation
 
-struct Result: Decodable {
+struct Result: Codable {
     let results: [Song]?
 }
 
-struct Song: Decodable {
+struct Song: Codable {
     
-    let id: Double?
+    let id: Int?
     let wrapperType: String?
     let trackName: String?
     let primaryGenreName: String?
     let artworkUrl: String?
-    let collectionId: Double?
+    let collectionId: Int?
     let collectionName: String?
-    let artistId: String?
+    let artistId: Int?
     let artistName: String?
 }
 

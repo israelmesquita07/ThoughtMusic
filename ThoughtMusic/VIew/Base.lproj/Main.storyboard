@@ -60,6 +60,9 @@
                     <navigationItem key="navigationItem" title="Shuffle Songs" id="Y4g-9e-hQ0">
                         <barButtonItem key="rightBarButtonItem" image="shuffle" id="jYD-cG-PyO">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="shuffleAction:" destination="BYZ-38-t0r" id="LDv-dU-GQh"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
