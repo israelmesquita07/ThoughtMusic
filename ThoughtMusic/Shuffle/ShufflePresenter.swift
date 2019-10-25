@@ -11,7 +11,7 @@ import Foundation
 protocol ShufflePresenterProtocol {
     func showSongs(songs: [Song])
     func showError(_ bool:Bool)
-//    func toggleLoading(_ bool:Bool)
+    func toggleLoading(_ bool:Bool)
 }
 
 class ShufflePresenter: ShufflePresenterProtocol {
@@ -27,4 +27,7 @@ class ShufflePresenter: ShufflePresenterProtocol {
         shufflePresenterDelegate?.showError(bool)
     }
     
+    func toggleLoading(_ bool: Bool) {
+        shufflePresenterDelegate?.toggleLoading(bool)
+    }
 }

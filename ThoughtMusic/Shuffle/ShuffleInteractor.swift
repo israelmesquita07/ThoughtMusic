@@ -19,6 +19,7 @@ class ShuffleInteractor: ShuffleInteractorProtocol {
     
     func getSongs(urlIds: [Int]) {
      
+        shuffleInteractorDelegate?.toggleLoading(true)
         worker = ShuffleWorker()
         worker?.getSongs(urlIds: urlIds, onComplete: { [weak self] (result) in
             

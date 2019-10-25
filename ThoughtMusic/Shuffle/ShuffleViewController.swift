@@ -13,13 +13,15 @@ protocol ShuffleViewControllerProtocol {
     func getSongs()
     func showSongs(songs: [Song]?)
     func showError(_ bool:Bool)
-//    func toggleLoading(_ bool:Bool)
+    func toggleLoading(_ bool:Bool)
 }
 
 class ShuffleViewController: UIViewController, ShuffleViewControllerProtocol {
     
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loadingView: UIView!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     private var presenter:ShufflePresenter = ShufflePresenter()
     private var interactor:ShuffleInteractor = ShuffleInteractor()
@@ -38,6 +40,16 @@ class ShuffleViewController: UIViewController, ShuffleViewControllerProtocol {
         tableView.tableFooterView = UIView()
     }
     
+    func toggleLoading(_ bool:Bool){
+        if bool {
+            loadingView.isHidden = false
+            activityIndicator.startAnimating()
+            return
+        }
+        loadingView.isHidden = true
+        activityIndicator.stopAnimating()
+    }
+    
     private func downloadImage(from url: String) -> UIImage {
         
         guard let url = URL(string: url) else { return UIImage() }
@@ -54,9 +66,10 @@ class ShuffleViewController: UIViewController, ShuffleViewControllerProtocol {
     
     private func shuffleSongs() {
         songsArray = songsArray.shuffled()
-        songsArray = songsArray.sorted(by: { $0.artistId == $1.artistId })
+        songsArray = Utils.noRepeatedSort(songsArray)
         DispatchQueue.main.async {
             self.tableView.reloadData()
+            self.toggleLoading(false)
         }
     }
     
@@ -71,6 +84,7 @@ class ShuffleViewController: UIViewController, ShuffleViewControllerProtocol {
     }
     
     @IBAction func shuffleAction(_ sender: UIBarButtonItem) {
+        toggleLoading(true)
         shuffleSongs()
     }
     

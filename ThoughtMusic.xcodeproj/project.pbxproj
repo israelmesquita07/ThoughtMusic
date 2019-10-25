@@ -27,6 +27,8 @@
 		58C2C0792362391D0087FF23 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C0772362391D0087FF23 /* API.swift */; };
 		58C2C07C236239680087FF23 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C07B236239680087FF23 /* Endpoint.swift */; };
 		58C2C07D236239680087FF23 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C07B236239680087FF23 /* Endpoint.swift */; };
+		58C2C07F2362793E0087FF23 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C07E2362793E0087FF23 /* Utils.swift */; };
+		58C2C0802362793E0087FF23 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2C07E2362793E0087FF23 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,7 @@
 		58C2C07123614C850087FF23 /* ShuffleWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShuffleWorker.swift; sourceTree = "<group>"; };
 		58C2C0772362391D0087FF23 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		58C2C07B236239680087FF23 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		58C2C07E2362793E0087FF23 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,7 @@
 				58C2C07A2362392E0087FF23 /* Service */,
 				58C2C04C236149C80087FF23 /* Assets.xcassets */,
 				58C2C051236149C90087FF23 /* Info.plist */,
+				58C2C081236279430087FF23 /* Utils */,
 			);
 			path = ThoughtMusic;
 			sourceTree = "<group>";
@@ -154,6 +158,14 @@
 				58C2C07B236239680087FF23 /* Endpoint.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		58C2C081236279430087FF23 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				58C2C07E2362793E0087FF23 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +274,7 @@
 				58C2C06C23614C600087FF23 /* ShufflePresenter.swift in Sources */,
 				58C2C06F23614C720087FF23 /* ShuffleInteractor.swift in Sources */,
 				58C2C046236149C40087FF23 /* SceneDelegate.swift in Sources */,
+				58C2C07F2362793E0087FF23 /* Utils.swift in Sources */,
 				58C2C07223614C850087FF23 /* ShuffleWorker.swift in Sources */,
 				58C2C06923614C3F0087FF23 /* ShuffleViewController.swift in Sources */,
 				58C2C0782362391D0087FF23 /* API.swift in Sources */,
@@ -275,6 +288,7 @@
 			files = (
 				58C2C05B236149C90087FF23 /* ThoughtMusicTests.swift in Sources */,
 				58C2C07023614C720087FF23 /* ShuffleInteractor.swift in Sources */,
+				58C2C0802362793E0087FF23 /* Utils.swift in Sources */,
 				58C2C07D236239680087FF23 /* Endpoint.swift in Sources */,
 				58C2C06723614A4B0087FF23 /* Song.swift in Sources */,
 				58C2C07323614C850087FF23 /* ShuffleWorker.swift in Sources */,

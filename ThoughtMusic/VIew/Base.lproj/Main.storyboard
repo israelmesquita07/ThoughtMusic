@@ -47,12 +47,30 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qq6-1h-GJq">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="O5z-eh-Xx7">
+                                        <rect key="frame" x="169" y="293" width="37" height="37"/>
+                                        <color key="color" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20402157309999999" green="0.15207219120000001" blue="0.21177104120000001" alpha="0.78405928940000003" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="O5z-eh-Xx7" firstAttribute="centerY" secondItem="qq6-1h-GJq" secondAttribute="centerY" id="A2n-uW-jpr"/>
+                                    <constraint firstItem="O5z-eh-Xx7" firstAttribute="centerX" secondItem="qq6-1h-GJq" secondAttribute="centerX" id="vvd-F8-4F7"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="qq6-1h-GJq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="27V-JZ-I0B"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qq6-1h-GJq" secondAttribute="trailing" id="33V-DZ-vdU"/>
+                            <constraint firstItem="qq6-1h-GJq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="7P9-st-V7y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Adh-Wy-aoS" secondAttribute="trailing" id="AYk-96-LQi"/>
                             <constraint firstItem="Adh-Wy-aoS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="J8Z-BH-Uki"/>
                             <constraint firstItem="Adh-Wy-aoS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WMh-Mj-CDz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qq6-1h-GJq" secondAttribute="bottom" id="b5H-Uc-ucm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Adh-Wy-aoS" secondAttribute="bottom" id="rt1-r6-s0Q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -66,6 +84,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="O5z-eh-Xx7" id="wSm-Iy-KmB"/>
+                        <outlet property="loadingView" destination="qq6-1h-GJq" id="CXE-WG-Nca"/>
                         <outlet property="tableView" destination="Adh-Wy-aoS" id="d5S-3j-kYf"/>
                     </connections>
                 </viewController>
